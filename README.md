@@ -26,7 +26,7 @@ This project explores the stochastic nature of financial time-series data by app
 
 ##  Dataset Description
 * **Source:** Historical stock data for 6 major banks of Pakistan (MCB, HBL, Meezan, Askari, NBP, UBL).
-* **Size:** Daily stock prices spanning [Jan 01,2015 - Dec 05, 2025].
+* **Size:** Daily stock prices spanning **Jan 01,2015 - Dec 05, 2025**.
 * **Features Used:** `Adj Close` (Adjusted Close Price).
 * **Preprocessing Pipeline:**
     * **Cleaning:** Removal of NaNs and sorting by chronological order.
@@ -42,9 +42,9 @@ This project explores the stochastic nature of financial time-series data by app
 We established baselines using `scikit-learn`:
 * **Polynomial Regression:** Fitted a non-linear curve (Degree 4) to model the macro-trend of the stock price over time.
 * **ARIMA (AutoRegressive Integrated Moving Average):** A robust statistical method used to forecast future points in the series. We utilized `auto_arima` to optimize the $(p,d,q)$ parameters:
-  * AR (p):* Uses the dependency between an observation and a number of lagged observations.
-  * I (d):* Uses differencing of raw observations to make the time series stationary.
-  * MA (q):* Uses the dependency between an observation and a residual error from a moving average model.
+  * AR (p): Uses the dependency between an observation and a number of lagged observations.
+  * I (d): Uses differencing of raw observations to make the time series stationary.
+  * MA (q): Uses the dependency between an observation and a residual error from a moving average model.
 
 
 ### 2. Deep Learning Architecture
@@ -74,17 +74,17 @@ We implemented a **Long Short-Term Memory (LSTM)** network using `TensorFlow/Ker
 
 | Bank Dataset | Polynomial Reg | ARIMA | LSTM (Deep Learning) |
 | :--- | :---: | :---: | :---: |
-| **Askari Bank** | [2027.80] | [1.1582] | **[104.53]** |
-| **Meezan Bank** | [52950.06] | [5.0267] | **[104.53]** |
-| **National Bank of Pakistan** | [12742.70] | [2.3644] | **[104.53]** |
-| **Muslim Commercial Bank** | [15665.42] | [3.9908] | **[104.53]** |
-| **United Bank Limited** | [31985.46] | [28.6934] | **[104.53]** |
-| **Habib Bank Limited** | [40776.52] | [3.5086] | **[104.53]** |
+| **Askari Bank** | 2027.80 | 1.1582 | **104.53** |
+| **Meezan Bank** | 52950.06 | 5.0267 | **104.53** |
+| **National Bank of Pakistan** | 12742.70 | 2.3644 | **104.53** |
+| **Muslim Commercial Bank** | 15665.42 | 3.9908 | **104.53** |
+| **United Bank Limited** | 31985.46 | 28.6934 | **104.53** |
+| **Habib Bank Limited** | 40776.52 | 3.5086 | **104.53** |
 
 ### Visualization of Results
 * **Trend vs. Variance:** Polynomial regression successfully identified long-term trends but failed to capture daily volatility.
 * **Statistical Forecasting:** ARIMA provided stable short-term forecasts, effectively staying within the 95% confidence intervals, though it struggled with sudden market shocks.
-* **Deep Learning Superiority:** The LSTM model demonstrated the ability to "learn" the market noise and react to price changes faster than statistical methods, resulting in the lowest error rates.
+* **Deep Learning Superiority:** The LSTM model demonstrated the ability to "learn" the market noise and react to price changes faster than statistical methods, resulting in the slightly lower error rates.
 
 ### Business Impact Analysis
 * **Risk Management:** Accurate volatility prediction allows banks to hedge against potential downside risks.
@@ -93,7 +93,7 @@ We implemented a **Long Short-Term Memory (LSTM)** network using `TensorFlow/Ker
 
 ---
 
-## 🔚 Conclusion & Future Work
+## Conclusion & Future Work
 **Conclusion:**
 Our analysis confirms that while ARIMA provides a mathematically sound baseline for stationary data, **Deep Learning (LSTM)** is superior for complex, non-linear stock price prediction.Even though, LSTM model didn't acheive the lowest RMSE across all 6 datasets, proving its ability to retain long-term memory of market conditions, it is better suites for field work.
 
@@ -103,3 +103,17 @@ Our analysis confirms that while ARIMA provides a mathematically sound baseline 
 * **Live Deployment:** creating a Flask API to serve real-time predictions.
 
 ---
+
+## Plots:
+**Regression:
+
+<img width="1190" height="3590" alt="Untitled" src="https://github.com/user-attachments/assets/637fcf2e-d0f0-4ccf-8b2f-050c9765a2fd" />
+
+**ARIMA:
+
+<img width="1190" height="3590" alt="Untitled" src="https://github.com/user-attachments/assets/6683487e-9691-4ce0-91ef-7117f714d962" />
+
+LSTM:
+
+<img width="1589" height="490" alt="Untitled" src="https://github.com/user-attachments/assets/d77b9dc8-267e-4896-8cb9-938817a49064" />
+
