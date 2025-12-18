@@ -105,15 +105,15 @@ Our analysis confirms that while ARIMA provides a mathematically sound baseline 
 ---
 
 ## Plots:
-**Regression:
+**Regression:**
 
 <img width="1190" height="3590" alt="Untitled" src="https://github.com/user-attachments/assets/637fcf2e-d0f0-4ccf-8b2f-050c9765a2fd" />
 
-**ARIMA:
+**ARIMA:**
 
 <img width="1190" height="3590" alt="Untitled" src="https://github.com/user-attachments/assets/6683487e-9691-4ce0-91ef-7117f714d962" />
 
-LSTM:
+**LSTM:**
 
 <img width="1589" height="490" alt="Untitled" src="https://github.com/user-attachments/assets/d77b9dc8-267e-4896-8cb9-938817a49064" />
 
