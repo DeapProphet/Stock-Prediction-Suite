@@ -2,10 +2,6 @@
 
 ## Project Title & Team Members
 **Project:** Stock Price Prediction using Classical ML and Deep Learning  
-**Author:**
-* **Hassan Ahmad**
-* **[Arooba](https://github.com/aroobabee24seecs-hub)**
-
 ---
  
 ##  Abstract
